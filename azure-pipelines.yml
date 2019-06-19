@@ -4,17 +4,6 @@ steps:
 - task: aloisdeniel.flutter.flutter-install.FlutterInstall@0
   displayName: 'Flutter Install'
 
-- task: carlowahlstedt.SecureFiles.SecureFiles.SecureFiles@1
-  displayName: KeyStore
-  inputs:
-    secureFileName: '000000-0000-0000-0000-000000000'
-
-- task: carlowahlstedt.SecureFiles.SecureFiles.SecureFiles@1
-  displayName: 'Environment Variables'
-  inputs:
-    secureFileName: '000000-0000-0000-0000-00000000000'
-    outputDirectory: '$(System.DefaultWorkingDirectory)/KhaozNet.CV.Flutter/'
-
 - task: aloisdeniel.flutter.flutter-build.FlutterBuild@0
   displayName: 'Flutter Build apk'
   inputs:
