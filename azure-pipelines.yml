@@ -5,7 +5,7 @@ steps:
   displayName: 'Flutter Install'
 
 - script: dir
-  workingDirectory: $(Agent.BuildDirectory)
+  workingDirectory: $(System.DefaultWorkingDirectory)
   displayName: List contents of a folder
 
 - task: aloisdeniel.flutter.flutter-build.FlutterBuild@0
