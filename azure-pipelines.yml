@@ -4,10 +4,9 @@ steps:
 - task: aloisdeniel.flutter.flutter-install.FlutterInstall@0
   displayName: 'Flutter Install'
 
-- task: CmdLine@2
-  displayName: 'show me the directory'
-  inputs:
-    #script: 'dir' 
+- script: dir
+  workingDirectory: $(Agent.BuildDirectory)
+  displayName: List contents of a folder
 
 - task: aloisdeniel.flutter.flutter-build.FlutterBuild@0
   displayName: 'Flutter Build apk'
