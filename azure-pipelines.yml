@@ -7,17 +7,17 @@ steps:
 - task: aloisdeniel.flutter.flutter-build.FlutterBuild@0
   displayName: 'Flutter Build apk'
   inputs:
-    projectDirectory: KhaozNet.CV.Flutter
+    projectDirectory: hello_world_flutter
     buildFlavour: release
 
 - task: CopyFiles@2
   displayName: 'Copy ReleaseNotes'
   inputs:
-    SourceFolder: KhaozNet.CV.Flutter
+    SourceFolder: hello_world_flutter
     Contents: releasenotes.txt
-    TargetFolder: KhaozNet.CV.Flutter/build/app/outputs/apk/release/
+    TargetFolder: hello_world_flutter/build/app/outputs/apk/release/
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   inputs:
-    PathtoPublish: KhaozNet.CV.Flutter/build/app/outputs/apk/release/
+    PathtoPublish: hello_world_flutter/build/app/outputs/apk/release/
